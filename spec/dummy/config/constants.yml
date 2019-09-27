@@ -1,0 +1,7 @@
+# Define constants for environment, store and location configuration
+constants:
+
+  # Default test constants
+  test:
+    env_name: development
+    domain: de.lvh.me

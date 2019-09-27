@@ -1,0 +1,14 @@
+= Authentication
+
+Authentication is a Rails engine based solution used for providing model agnostic authentication functioanlity to any project that mounts the engine.
+
+It solves the problem of rewriting authentications for multiple models by using conecpt of account which takes care of the authentication related functionality to any model that has a foreign key account_id. 
+For example, a very common use case is to have internal admin as well as service partners fucntioanlity in an app. We can use the same engine for both by introducing account_id in admin_user as well as partner_user models. Now we can choose to directly inherit the controllers to use in both flows or have the User write their own controller and using only service functionality by using the exposed model & library functionality.
+
+Besides this engine also functions as session manager by maintaining sessions in redis based data store.It introduces checks for max login attaempts, max active sessions per user etc.
+
+The project is structrued as a traditional Rails engine and needs familiarity with the concept to go through the code smoothly, so please consult https://guides.rubyonrails.org/engines.html before going through the codebase for better understanding. To go through the main components please check out app/models, app/services & lib/authentication folders in the codebase.
+
+
+
+This project uses MIT-LICENSE.

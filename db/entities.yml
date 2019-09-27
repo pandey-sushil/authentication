@@ -1,0 +1,7 @@
+admin:
+  root_url: '/admin/orders'
+  login_url: '/admin/login'
+
+partner:
+  root_url: '/partner/index'
+  login_url: '/partner/login'
